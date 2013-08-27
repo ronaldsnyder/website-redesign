@@ -5,8 +5,8 @@ from django.db import models
 
 class Education(models.Model):
     college = models.CharField(max_length=255)
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField(blank=True)
+    start = models.CharField(max_length=255)
+    end = models.CharField(max_length=255)
     degree = models.CharField(max_length=255)
     awards = models.CharField(max_length=255, blank = True, null=True)
 
@@ -21,8 +21,8 @@ class Employer(models.Model):
 class Job(models.Model):
     employer = models.ForeignKey('Employer')
     title = models.CharField(max_length=255)
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField(blank=True, null=True)
+    start_date = models.DateField()
+    end_date = models.DateField(blank=True, null=True)
     description = models.TextField()
 
 class Responsibility(models.Model):

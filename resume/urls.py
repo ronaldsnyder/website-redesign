@@ -1,12 +1,6 @@
 from django.conf.urls import patterns, include, url
-from django.contrib import admin
 
-
-admin.autodiscover()
-
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from resume import views
 
 urlpatterns = patterns('',
     # Examples:
@@ -18,8 +12,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'resume.views.index', name='index'),
-    url(r'^resume/', include('resume.urls', namespace='resume', app_name='resume')),
-    url(r'^(?P<slug>[\w\-]+)/$', 'blog.views.post'),
+    url(r'^$', 'resume.views.index', name='resume-index'),
+    url(r'^experience$', 'resume.views.experience', name='experience'),
+    url(r'^skills$', 'resume.views.skills', name='skills'),
+    url(r'^education$', 'resume.views.education', name='education'),
 )

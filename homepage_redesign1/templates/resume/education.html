@@ -1,0 +1,47 @@
+{% extends 'resume/education_base.html' %}
+{% load url from future %}
+
+
+{% block content %}	
+	<br>
+	<br>
+
+		<div class="media">
+			<a class="pull-left" href="#">
+				<img class="media-object" width="500" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+				src="{{STATIC_URL}}/img/Baker-College-logo-small.jpg">
+			</a>
+			<div class="media-body">
+				<br>
+				<br>
+				<div class="page-header">
+					<h2 class="media-heading">{{bs.college}}<br><small>{{bs.degree}}</small></h2> 
+				</div>
+				<h4 class="media-heading"><strong>	{{bs.start}} to {{bs.end}}</strong></h4>
+				<p class="media-heading">{{bs.awards}}</p>
+			</div><!--/media-body-->
+		</div><!--/media-->
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="media">
+			<a class="pull-right" href="#">
+				<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=baker+college+map&amp;ie=UTF8&amp;hl=en&amp;hq=baker+college&amp;t=h&amp;ll=42.97532,-83.696113&amp;spn=0.016328,0.032015&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?q=baker+college+map&amp;ie=UTF8&amp;hl=en&amp;hq=baker+college&amp;t=h&amp;ll=42.97532,-83.696113&amp;spn=0.016328,0.032015&amp;source=embed" 
+				style="color:#0000FF;text-align:left"></a></small>
+			</a>
+			<div class="media-body">
+				<br>
+				<br>
+				<div class="page-header">
+					<h2 class="media-heading">{{ass.college}}<br><small>{{ass.degree}}</small></h2> 
+				</div>
+				<h4 class="media-heading"><strong>	{{ass.start}} to {{ass.end}}</strong></h4>
+				<p class="media-heading">{{ass.awards}}</p>
+			</div><!--/media-body-->
+		</div><!--/media-->
+		<br>
+		<br>
+		<br>
+		<br>
+{% endblock %}

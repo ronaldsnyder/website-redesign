@@ -1,21 +1,21 @@
 {% extends 'resume/base.html' %}
+{% load url from future %}
 
 
-
-	{% block hero %}
+	{% block jumbo%}
 		<div class="jumbotron">
-			<div class="container">
-				<h1>Ron Snyder, Web Developer</h1>
-				
-				<p>I am an achiever who is constantly trying to improve professionally and personally.  I am currently employed as
-				   a Programmer/Web Analyst using PL/SQL, SQL, PHP, CSS, HTML, javascript, hard work and Python when I can.</p>
-				   
-				<p>You can find some of my code on <a href="https://github.com/ronaldsnyder">GitHub</a></p>
-				
-				<p><a class="btn btn-primary btn-lg" href="{% url index%}">Learn more &raquo;</a></p>
-			</div> <!-- end of container -->
+			<h1>Ron Snyder, Web Developer</h1>
+			
+			<p>I am an achiever who is constantly trying to improve professionally and personally.  I am currently employed as
+			   a Programmer/Web Analyst using PL/SQL, SQL, PHP, CSS, HTML, javascript, hard work and Python when I can.</p>
+			   
+			<p>You can find some of my code on <a href="https://github.com/ronaldsnyder">GitHub</a></p>
+			
+			<p><a class="btn btn-primary btn-lg" href="{% url 'resume:experience' %}">Learn more &raquo;</a></p>
 		</div> <!-- end of jumbotron -->
-	{% endblock hero%}
+	{% endblock jumbo%}
+
+
 	
 
 

@@ -1,3 +1,29 @@
 {% extends 'resume/index_base.html' %}
- 
+{% load url from future %}
+
+	{% block content %}
+	
+		<div class="row">
+	        <div class="col-lg-4">
+	          <h2>Experience</h2>
+	          <p>Web Analyst/Programmer for Eastern Michigan University.</p>
+	          <p>Application Specialist, Developer, Banner HE support for Kettering University.</p>
+	          <br>
+	          <p><a class="btn btn-primary" href="{% url 'resume:experience' %}">View details &raquo;</a></p>
+	        </div>
+	        <div class="col-lg-4">
+	          <h2>Skills</h2>
+	          <p>Oracle Database, PL/SQL, SQL, Oracle Application Express, HTML, CSS, TCP/IP, VoIP, SIP and Linux.</p>
+	          <p>In my spare time a Python and web programming enthusiast who dabbles in Django and MySQL.</p>
+	          <br>
+	          <p><a class="btn btn-primary" href="{% url 'resume:skills' %}">View details &raquo;</a></p>
+	       </div>
+	        <div class="col-lg-4">
+	          <h2>Education</h2>
+	          <p>Bachelors degree in Computer Science from Baker College.  3.57 GPA and graduated Cum Laude</p>
+	          <p>Associates degree of Applied Science-Java Programming from Baker College.  3.71 GPA and graduated Magna Cum Laude</p>
+	          <p><a class="btn btn-primary" href="{% url 'resume:education' %}">View details &raquo;</a></p>
+	        </div>
+		</div> <!-- /row -->	
+	{% endblock content%} 
  
